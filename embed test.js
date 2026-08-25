@@ -14,6 +14,7 @@ const template = `
     --debate-color:#ffd166;
     --vote-color: #0BADFE;
     --deadline-color:#EF476F;
+    --sans-serif: "HEXFranklin", sans-serif;
 
     font-family: "TiemposText",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
     /*GRID*/
@@ -22,12 +23,12 @@ const template = `
         list-style-type:none;
         grid-template-columns:repeat(7,1fr);
         grid-template-rows:repeat(5,1fr);
-        /*gap:.5px;*/
         padding:0;
 
         li{
-            /*border:1px solid black;*/
             padding:5px;
+            font-family: var(--sans-serif);
+
         }
         .debate{
               background-color: rgb(from var(--debate-color) r g b / 0.5);}
@@ -48,12 +49,14 @@ const template = `
     #legend{
         display:flex;
         flex-direction:row;
+        margin:.75rem 0;
     }
 
     .legend{
             display:flex;
             margin-right:1rem;
             align-items: center;
+            font-family: var(--sans-serif);
 
         }
         .legend::before{
@@ -111,8 +114,8 @@ const template = `
     .calendar-modal-date{
         grid-colum: 1/span 1;
         grid-row:1/span 1;
-        h3{
-            margin:0;
+        h2{
+            margin-top:0;
         }
     }
    
