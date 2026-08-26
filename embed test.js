@@ -3,7 +3,6 @@ embedcalendar();
 function embedcalendar(){
 
 
-// 1. Define your HTML, CSS, and JavaScript string
 const template = `
   <style>
 #elxn-calendar{
@@ -311,13 +310,10 @@ const template = `
 </script>
 `;
 
-// 2. Select your target element
 const targetDiv = document.getElementById('elxncalendar');
 
-// 3. Convert the string into an executable DOM Fragment
 const contextualFragment = document.createRange().createContextualFragment(template);
 
-// 4. Append it to clean out old content and run the script
 targetDiv.innerHTML = ''; 
 targetDiv.appendChild(contextualFragment);
 };
