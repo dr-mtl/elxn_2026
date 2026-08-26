@@ -17,6 +17,9 @@ const template = `
     --sans-serif: "HEXFranklin", sans-serif;
 
     font-family: "TiemposText",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    h2{
+        font-weight:600;
+    }
     /*GRID*/
     ol{
         display:grid;
@@ -24,6 +27,7 @@ const template = `
         grid-template-columns:repeat(7,1fr);
         grid-template-rows:repeat(5,1fr);
         padding:0;
+        height:400px;
 
         li{
             padding:5px;
@@ -114,8 +118,9 @@ const template = `
     .calendar-modal-date{
         grid-colum: 1/span 1;
         grid-row:1/span 1;
-        h2{
+        h3{
             margin-top:0;
+            font-family: var(--sans-serif);
         }
     }
    
@@ -125,7 +130,9 @@ const template = `
     font-size: 24px;
     cursor: pointer;
     grid-column: 2/span 1;
-    grid-row:1/span 1}
+    grid-row:1/span 1;
+    font-family: var(--sans-serif);}
+
 
 }
   </style>
@@ -146,29 +153,29 @@ const template = `
                 <li data-date="09/06/2026" class="calendar-entry">6 Sept.</li>
                 <li data-date="09/07/2026" class="calendar-entry">7</li>
                 <li data-date="09/08/2026" class="calendar-entry">8</li>
-                <li data-date="09/09/2026" data-debate="Cinq chefs, une élection, a special program with all five leaders" class="calendar-entry debate modal-entry">9</li>
+                <li data-date="09/09/2026" data-debate="Cinq chefs, une élection, a special program with all five leaders, 8 p.m. on Radio-Canada" class="calendar-entry debate modal-entry">9</li>
                 <li data-date="09/10/2026" class="calendar-entry">10</li>
                 <li data-date="09/11/2026" class="calendar-entry">11</li>
                 <li data-date="09/12/2026" class="calendar-entry">12</li>
                 <li data-date="09/13/2026" class="calendar-entry">13</li>
                 <li data-date="09/14/2026" class="calendar-entry">14</li>
-                <li data-date="09/15/2026" data-debate="TVA leaders&#x27; debate" class="calendar-entry debate modal-entry">15</li>
-                <li data-date="09/16/2026" data-deadline="Deadline to request a ballot to vote from outside Quebec." data-debate="Noovo/Crave leaders&#x27; debate" class="calendar-entry deadline debate modal-entry">16</li>
+                <li data-date="09/15/2026" data-debate="TVA leaders&#x27; debate, 8 p.m." class="calendar-entry debate modal-entry">15</li>
+                <li data-date="09/16/2026" data-deadline="Deadline to request a ballot to vote from outside Quebec." data-debate="Noovo/Crave leaders&#x27; debate, 8 p.m." class="calendar-entry deadline debate modal-entry">16</li>
                 <li data-date="09/17/2026" class="calendar-entry">17</li>
                 <li data-date="09/18/2026" class="calendar-entry">18</li>
                 <li data-date="09/19/2026" class="calendar-entry">19</li>
                 <li data-date="09/20/2026" class="calendar-entry">20</li>
-                <li data-date="09/21/2026" data-deadline="Deadline to request voting at home" class="calendar-entry deadline modal-entry">21</li>
+                <li data-date="09/21/2026" class="calendar-entry">21</li>
                 <li data-date="09/22/2026" class="calendar-entry">22</li>
-                <li data-date="09/23/2026" data-debate="Radio-Canada leaders&#x27; debate" class="calendar-entry debate modal-entry">23</li>
+                <li data-date="09/23/2026" data-debate="Radio-Canada leaders&#x27; debate, 8 p.m." class="calendar-entry debate modal-entry">23</li>
                 <li data-date="09/24/2026" class="calendar-entry">24</li>
-                <li data-date="09/25/2026" data-vote="Registration and voting at the office of the returning officer, 9:30 a.m. to 8 p.m., and at seniors&#x27; homes and college campuses." class="calendar-entry vote modal-entry">25</li>
-                <li data-date="09/26/2026" data-vote="Registration and voting at the office of the returning officer, 9:30 a.m. to 8 p.m., and at seniors&#x27; homes and college campuses." class="calendar-entry vote modal-entry">26</li>
+                <li data-date="09/25/2026" data-vote="Registration and voting at the office of the returning officer" class="calendar-entry vote modal-entry">25</li>
+                <li data-date="09/26/2026" data-vote="Registration and voting at the office of the returning officer" class="calendar-entry vote modal-entry">26</li>
                 <li data-date="09/27/2026" data-vote="Advance polling, 9:30 a.m. to 8 p.m." class="calendar-entry vote modal-entry">27</li>
                 <li data-date="09/28/2026" data-vote="Advance polling, 9:30 a.m. to 8 p.m." class="calendar-entry vote modal-entry">28</li>
-                <li data-date="09/29/2026" data-vote="Registration and voting at the office of the returning officer, 9:30 a.m. to 8 p.m." class="calendar-entry vote modal-entry">29</li>
-                <li data-date="09/30/2026" data-vote="Registration and voting at the office of the returning officer, 9:30 a.m. to 8 p.m." class="calendar-entry vote modal-entry">30</li>
-                <li data-date="10/01/2026" data-deadline="Deadline (2 p.m.) to add or correct entries on the list of electors." data-vote="Registration and voting at the office of the returning officer, 9:30 a.m. to 2 p.m." class="calendar-entry deadline vote modal-entry">1 Oct.</li>
+                <li data-date="09/29/2026" data-vote="Registration and voting at the office of the returning officer" class="calendar-entry vote modal-entry">29</li>
+                <li data-date="09/30/2026" data-vote="Registration and voting at the office of the returning officer" class="calendar-entry vote modal-entry">30</li>
+                <li data-date="10/01/2026" data-deadline="Deadline to add or correct entries on the list of electors." data-vote="Registration and voting at the office of the returning officer" class="calendar-entry deadline vote modal-entry">1 Oct.</li>
                 <li data-date="10/02/2026" class="calendar-entry">2</li>
                 <li data-date="10/03/2026" class="calendar-entry">3</li>
                 <li data-date="10/04/2026" class="calendar-entry">4</li>
