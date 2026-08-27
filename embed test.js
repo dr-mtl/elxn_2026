@@ -31,6 +31,7 @@ const template = `
         li{
             padding:5px;
             font-family: var(--sans-serif);
+            font-size: var(--wp--custom--article-date--font-size);
 
         }
         .debate{
