@@ -4,8 +4,7 @@ function embedcalendar(){
 
 
 const template = `
-  <style>
-#elxn-calendar{
+  <style>#elxn-calendar{
     -webkit-box-sizing:border-box;
     -moz-box-sizing: border-box;
     box-sizing:border-box;
@@ -68,7 +67,9 @@ const template = `
                 content:"";
                 display:inline-block;
                 width:1rem;
+                width: var(--wp--custom--editor--p--typography--font-size);
                 height:1rem;
+                height:var(--wp--custom--editor--p--typography--font-size);
                 border-radius:100%;
                 margin-right:.3rem;
         }
@@ -120,11 +121,14 @@ const template = `
     }
 
     .calendar-modal-date{
-        grid-colum: 1/span 1;
+        grid-column: 1/span 1;
         grid-row:1/span 1;
         h3{
             margin-top:0;
             font-family: var(--sans-serif);
+            font-size:19px;
+            font-size: clamp(var(--wp--custom--font-size--type-size-19), 0.47vw + 14.5px, var(--wp--custom--font-size--type-size-22));}
+
         }
     }
 
@@ -134,11 +138,11 @@ const template = `
     cursor: pointer;
     grid-column: 2/span 1;
     grid-row:1/span 1;
-    font-family: var(--sans-serif);}
+    font-family: var(--sans-serif);
     line-height:1;
     margin-bottom: var(--wp--preset--spacing--05);
-    font-size:24px;
-    font-size: clamp(var(--wp--custom--font-size--type-size-19), 0.47vw + 14.5px, var(--wp--custom--font-size--type-size-22));
+    font-size:19px;
+    font-size: clamp(var(--wp--custom--font-size--type-size-19), 0.47vw + 14.5px, var(--wp--custom--font-size--type-size-22));}
 }
   </style>
   
