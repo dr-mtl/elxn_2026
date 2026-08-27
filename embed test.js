@@ -4,8 +4,7 @@ function embedcalendar(){
 
 
 const template = `
-  <style>
-  #elxn-calendar{
+  <style>#elxn-calendar{
     -webkit-box-sizing:border-box;
     -moz-box-sizing: border-box;
     box-sizing:border-box;
@@ -120,6 +119,7 @@ const template = `
         font-size: var(--wp--custom--editor--p--typography--font-size);
         line-height: var(--wp--custom--editor--p--typography--line-height);
         p{margin-top:0;}
+        p:last-of-type{margin-bottom:0};
        
     }
 
