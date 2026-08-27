@@ -4,7 +4,8 @@ function embedcalendar(){
 
 
 const template = `
-  <style>#elxn-calendar{
+  <style>
+    #elxn-calendar{
     -webkit-box-sizing:border-box;
     -moz-box-sizing: border-box;
     box-sizing:border-box;
@@ -145,7 +146,9 @@ const template = `
     line-height:1;
     margin-bottom: var(--wp--preset--spacing--05);
     font-size:19px;
-    font-size: clamp(var(--wp--custom--font-size--type-size-19), 0.47vw + 14.5px, var(--wp--custom--font-size--type-size-22));}
+    font-size: clamp(var(--wp--custom--font-size--type-size-19), 0.47vw + 14.5px, var(--wp--custom--font-size--type-size-22));
+    font-weight:600;
+    }
 }
   </style>
   
@@ -177,7 +180,7 @@ const template = `
                 <li data-date="09/18/2026" class="calendar-entry">18</li>
                 <li data-date="09/19/2026" class="calendar-entry">19</li>
                 <li data-date="09/20/2026" class="calendar-entry">20</li>
-                <li data-date="09/21/2026" class="calendar-entry">21</li>
+                <li data-date="09/21/2026" data-deadline="Deadline to request voting at home" class="calendar-entry deadline modal-entry">21</li>
                 <li data-date="09/22/2026" class="calendar-entry">22</li>
                 <li data-date="09/23/2026" data-debate="Radio-Canada leaders&#x27; debate, 8 p.m." class="calendar-entry debate modal-entry">23</li>
                 <li data-date="09/24/2026" class="calendar-entry">24</li>
