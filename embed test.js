@@ -59,7 +59,8 @@ const template = `
             display:flex;
             margin-right:1rem;
             align-items: center;
-            font-family: var(--sans-serif);
+            font-size: var(--wp--custom--editor--p--typography--font-size);
+            line-height: var(--wp--custom--editor--p--typography--line-height);
 
         }
         .legend::before{
@@ -111,6 +112,9 @@ const template = `
     }
      .calendar-modal-content{
         grid-column:1/span 2;
+        margin-top:.5rem;
+        font-size: var(--wp--custom--editor--p--typography--font-size);
+        line-height: var(--wp--custom--editor--p--typography--line-height);
        
     }
 
@@ -122,7 +126,7 @@ const template = `
             font-family: var(--sans-serif);
         }
     }
-   
+
     .calendar-modal-close {
     border:none;
     background: none;
