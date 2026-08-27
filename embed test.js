@@ -4,7 +4,8 @@ function embedcalendar(){
 
 
 const template = `
-  <style>#elxn-calendar{
+  <style>
+  #elxn-calendar{
     -webkit-box-sizing:border-box;
     -moz-box-sizing: border-box;
     box-sizing:border-box;
@@ -110,6 +111,7 @@ const template = `
     display: grid;
     grid-template-columns: auto min-content;
     grid-template-rows: min-content auto;
+    row-gap:.75rem;
     align-items:center;
     }
      .calendar-modal-content{
@@ -117,6 +119,7 @@ const template = `
         margin-top:.5rem;
         font-size: var(--wp--custom--editor--p--typography--font-size);
         line-height: var(--wp--custom--editor--p--typography--line-height);
+        p{margin-top:0;}
        
     }
 
@@ -124,7 +127,7 @@ const template = `
         grid-column: 1/span 1;
         grid-row:1/span 1;
         h3{
-            margin-top:0;
+            margin:0;
             font-family: var(--sans-serif);
             font-size:19px;
             font-size: clamp(var(--wp--custom--font-size--type-size-19), 0.47vw + 14.5px, var(--wp--custom--font-size--type-size-22));}
