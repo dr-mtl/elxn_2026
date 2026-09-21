@@ -128,7 +128,7 @@ async function getRidings(postalCode) {
 
             const url = "https://dr-mtl.github.io/elxn_2026/postal/" + fsa + ".json";
             const response = await fetch(url);
-            
+
             if (!response.ok) {
                 throw new Error("FSA_NOT_FOUND");
             }
@@ -194,7 +194,7 @@ async function runPostalLookup() {
     if (!postalRegex.test(postalCode)) {
 
         resultsContainer.innerHTML =
-            `<p>This is not a Quebec postal code.</p>`;
+            '<p>This is not a Quebec postal code.</p>';
 
         return;
 
@@ -207,7 +207,7 @@ async function runPostalLookup() {
         if (results.length === 0) {
 
             resultsContainer.innerHTML =
-                `<p>This is not a Quebec postal code.</p>`;
+                '<p>This is not a Quebec postal code.</p>';
 
             return;
 
@@ -220,40 +220,25 @@ async function runPostalLookup() {
             const ridingNames =
                 results.map(result => result.riding);
 
-            html += `
-                <p>
-                    There are ${results.length} ridings in this postal code:
-                    ${ridingNames.join(" and ")}.
-                </p>
-            `;
+            html += '<p>' +'There are ' + results.length + ' ridings in this postal code: ' + ridingNames.join(' and ') + '.</p>';
 
         }
 
         results.forEach(function (result) {
 
-            html += `<h5>${result.riding}</h5>`;
-            html += `<ul class="candidate-list">`;
+            html += '<h5>'+ result.riding +'</h5>';
+            html += '<ul class="candidate-list">';
 
             result.candidates.forEach(function (candidate) {
 
                 const partyClass =
                     partyToClass(candidate.Party || "");
 
-                html += `
-                    <li class="candidate ${partyClass}">
-                        <p class="candidate-name">
-                            ${candidate.Name || ""}
-                        </p>
-
-                        <div class="riding-name">
-                            ${candidate.Party || ""}
-                        </div>
-                    </li>
-                `;
+                html += '<li class="candidate ' + partyClass + '">' +    '<p class="candidate-name">' + (candidate.Name || '') + '</p>' + '<div class="riding-name">' +    (candidate.Party || '') + '</div>' + '</li>';
 
             });
 
-            html += `</ul>`;
+            html += '</ul>';
 
         });
 
@@ -262,7 +247,7 @@ async function runPostalLookup() {
     } catch (error) {
 
         resultsContainer.innerHTML =
-            `<p>This is not a Quebec postal code.</p>`;
+            '<p>This is not a Quebec postal code.</p>';
 
         console.error(error);
 
@@ -317,7 +302,6 @@ function initializePostalLookup() {
 }
 
 initializePostalLookup();
-</script>
 `;
 
 const targetDiv = document.getElementById('postal-ridings-ballot');
