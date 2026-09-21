@@ -91,8 +91,7 @@ const template = `
     </div>
 
   <script>
-    
-    const fsaCache = {};
+  const fsaCache = {};
 let candidatesLookup = null;
 let postalLookupInitialized = false;
 
@@ -127,10 +126,9 @@ async function getRidings(postalCode) {
 
         try {
 
-            const response = await fetch(
-                `https://dr-mtl.github.io/elxn_2026/postal/${fsa}.json`
-            );
-
+            const url = "https://dr-mtl.github.io/elxn_2026/postal/" + fsa + ".json";
+            const response = await fetch(url);
+            
             if (!response.ok) {
                 throw new Error("FSA_NOT_FOUND");
             }
@@ -196,7 +194,7 @@ async function runPostalLookup() {
     if (!postalRegex.test(postalCode)) {
 
         resultsContainer.innerHTML =
-            "<p>This is not a valid postal code.</p>";
+            `<p>This is not a Quebec postal code.</p>`;
 
         return;
 
@@ -209,7 +207,7 @@ async function runPostalLookup() {
         if (results.length === 0) {
 
             resultsContainer.innerHTML =
-                "<p>This is not a Quebec postal code.</p>";
+                `<p>This is not a Quebec postal code.</p>`;
 
             return;
 
@@ -264,7 +262,7 @@ async function runPostalLookup() {
     } catch (error) {
 
         resultsContainer.innerHTML =
-            "<p>This is not a Quebec postal code.</p>";
+            `<p>This is not a Quebec postal code.</p>`;
 
         console.error(error);
 
@@ -319,8 +317,6 @@ function initializePostalLookup() {
 }
 
 initializePostalLookup();
-
-
 </script>
 `;
 
